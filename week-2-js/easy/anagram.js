@@ -8,6 +8,7 @@ function checkAnagram(str1,str2){
 	else{
 		return false;
 	}
+}
 
 console.log(checkAnagram('aam','maa'));
-}
+
