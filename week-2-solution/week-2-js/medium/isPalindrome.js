@@ -4,7 +4,13 @@
 */
 
 function isPalindrome(str) {
-  return true;
+  str = "" + str;
+  let rev = str.split("").reverse().join("");
+  if (str===rev)
+    return true;
+  else
+    return false;
 }
 
-module.exports = isPalindrome;
+const value = isPalindrome('ABBA');
+console.log(value);
