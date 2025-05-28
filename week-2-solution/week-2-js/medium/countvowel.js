@@ -7,5 +7,9 @@
 
 function countVowels(str) {
     // Your code here
+    let carr = str.toLowerCase().split("");
+    let k = carr.filter(carr=>(carr==='a'||carr==='e'||carr==='i'||carr==='o'||carr==='u'));
+    console.log(k.length);
 }
 
+countVowels('Mississippi');
