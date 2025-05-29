@@ -50,6 +50,7 @@ class Calculator {
 
     calculate(str) {
         try{
+            str = str.replaceAll(/\s/g,'');
             return eval(str);
         }
         catch(error){
@@ -63,7 +64,6 @@ let calculator = new Calculator();
 
 let expression = `10 +   6 *    (   6 - (4 + 1) / 2) + 7`;
 let exp = 'abc'
-expression = expression.replaceAll(/\s/g,'');
 console.log(calculator.calculate(expression));
 console.log(calculator.calculate(exp));
 
