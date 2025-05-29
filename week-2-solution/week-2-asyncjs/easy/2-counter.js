@@ -2,8 +2,10 @@
 
 let count = 0;
 
-
-setTimeout(()=> {
+function countin(){
     count++;
     console.log(count);
-}, 1000);
+    setTimeout(countin,1000);       //calling function upon every one second
+}
+
+countin();
