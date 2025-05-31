@@ -17,53 +17,50 @@
 */
 
 class Calculator {
-    constructor(){
-        this.result = 0;
-    }
+  constructor() {
+    this.result = 0;
+  }
 
-    add(n) {
-        this.result += n;
-    }
+  add(n) {
+    this.result += n;
+  }
 
-    subtract(n) {
-        this.result -= n;
-    }
+  subtract(n) {
+    this.result -= n;
+  }
 
-    multiply(n) {
-        this.result *= n;
-    }
+  multiply(n) {
+    this.result *= n;
+  }
 
-    divide(n) {
-        if (n==0)
-            console.log("Invalid Request!");
-        else
-            this.result /=n;
-    }
+  divide(n) {
+    if (n == 0) console.log("Invalid Request!");
+    else this.result /= n;
+  }
 
-    clear() {
-        this.result = 0;
-    }
+  clear() {
+    this.result = 0;
+  }
 
-    getResult() {
-        return this.result;
-    }
+  getResult() {
+    return this.result;
+  }
 
-    calculate(str) {
-        try{
-            str = str.replaceAll(/\s/g,'');
-            return eval(str);
-        }
-        catch(error){
-            console.log("Enter a Valid expression");
-            return "Invalid";
-        }
+  calculate(str) {
+    try {
+      str = str.replaceAll(/\s/g, "");
+      return eval(str);
+    } catch (error) {
+      console.log("Enter a Valid expression");
+      return "Invalid";
     }
+  }
 }
 
 let calculator = new Calculator();
 
 let expression = `10 +   6 *    (   6 - (4 + 1) / 2) + 7`;
-let exp = 'abc'
+let exp = "abc";
 console.log(calculator.calculate(expression));
 console.log(calculator.calculate(exp));
 
